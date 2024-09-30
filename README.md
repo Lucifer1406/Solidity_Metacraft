@@ -9,18 +9,18 @@ This project defines a basic ERC-20-like token smart contract on the Ethereum bl
 
 ### Executing program
 
-To run this program, you can use Codedamn, an online Solidity IDE. To get started, go to the Codedamn website at https://codedamn.com/playground/kKxMmhrb7bn7OxTL22_h6.
+To run this program, you can use Remix Etherium IDE, an online Solidity IDE. To get started, go to the Remix website at (https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.26+commit.8a97fa7a.js)
 
 Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar.
 
 License and Version Declaration
-```javascript
+```solidity
 
 pragma solidity 0.8.18;
 ```
 
 Contract Declaration and Public Variables
-```javascript
+```solidity
 contract MyToken {
     // Public variables here
     string public tokenName = "META";
@@ -29,12 +29,12 @@ contract MyToken {
 ```
 
 Mapping for Balances : This line declares a mapping called balancesOf. It is a key-value pair where the key is an Ethereum address (address) and the value is a uint (unsigned integer) representing the balance of tokens that the address holds.
-```javascript
+```solidity
     // Mapping variable here
     mapping(address => uint) public balancesOf;
 ```
 Mint Function: This declares a public function called mint that allows anyone to mint (create) new tokens.
-```javascript
+```solidity
     // Mint function
     function mint(address _address, uint _value) public {
         totalSupply += _value;
@@ -42,7 +42,7 @@ Mint Function: This declares a public function called mint that allows anyone to
     }
 ```
 Burn Function
-```javascript
+```solidity
     // Burn function
     function burn(address _address, uint _value) public {
         require(balancesOf[_address] >= _value, "Insufficient balance to burn");
