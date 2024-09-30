@@ -16,7 +16,7 @@ Once you are on the Remix website, create a new file by clicking on the "+" icon
 License and Version Declaration
 ```solidity
 
-pragma solidity 0.8.18;
+pragma solidity ^0.8.18;
 ```
 
 Contract Declaration and Public Variables
